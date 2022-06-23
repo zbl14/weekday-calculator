@@ -1,31 +1,33 @@
-# (Application Name)
+# Weekday Calculator
 
-#### (Brief Description of Application)
+#### Return day of week based on the inputted date
 
-#### By (Your Name Here)
+#### By Zhibin Liang
 
 ## Technologies Used
 
-* _List all_
-* _the major technologies_
-* _you used in your project_
-* _here_
+* JavaScript
+* HTML
+* CSS
 
 ## Description
+The Weekday calculator can tell you what is the day of week for today, past and future.
 
 ## Setup/Installation Requirements
-
-* _This is a great place_
-* _to list setup instructions_
-* _in a simple_
-* _easy-to-understand_
-* _format_
+1. Clone the repo
+```sh
+https://github.com/zbl14/weekday-calculator.git
+```
+2. Open index.html which is under src directory
+3. Enter a number and a name, then click "Submit" button
 
 ## Known Bugs
-
-* _Any known issues_
-* _should go here_
+* NA
 
 ## License
+MIT
 
 ## Contact Information
+Zhibin Liang <ifthereisoneday@gmail.com>
+
+Copyright &copy; 2022 Zhibin Liang
