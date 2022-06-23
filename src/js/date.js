@@ -37,6 +37,9 @@ export class Date {
     this.first2DigsOfYear();
     this.last2DigsOfYear();
     this.w = (this.day + Math.round(2.6 * this.month - 0.2) + 5 * (this.Y % 4) + 3 * this.Y + 5 * (this.y % 4)) % 7;
-    return this.w;
+    return this.w = this.w === 0 ? "Sunday"
+      : this.w === 1 ? "Monday"
+      : this.w === 6 ? "Saturday"
+      : "Sunday"
   }
 }
