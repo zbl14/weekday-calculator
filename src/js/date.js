@@ -23,9 +23,9 @@ export class Date {
   }
 
   last2DigsOfYear () {
-    // this.dateAdjust();
-    // let yearArr = this.year.toString().split("");
-    // let Y = parseInt(yearArr[2] + yearArr[3])
-    // return Y 
+    this.dateAdjust();
+    let yearArr = this.year.toString().split("");
+    let Y = parseInt(yearArr[2] + yearArr[3])
+    return Y 
   }
 }
