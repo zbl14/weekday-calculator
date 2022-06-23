@@ -33,9 +33,9 @@ describe('Date', () => {
     expect(date.year).toEqual(2000);
   });
 
-  test('should return adjust',() => {
+  test('should return seperated 4 digs of adjust year in an array',() => {
     const date = new Date(1, 1, 2000)
     date.first2DigsOfYear();
-    expect(date.year).toEqual(1999)
+    expect(yearArr).toEqual(["1", "9", "9", "9"])
   })
 });
