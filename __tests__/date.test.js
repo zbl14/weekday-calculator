@@ -44,4 +44,10 @@ describe('Date', () => {
     date.last2DigsOfYear();
     expect(date.last2DigsOfYear()).toEqual(99)
   })
+
+  test('should return last 2 digs of adjusted year',() => {
+    const date = new Date(1, 1, 2001)
+    date.last2DigsOfYear();
+    expect(date.last2DigsOfYear()).toEqual(00)
+  })
 });
