@@ -54,6 +54,6 @@ describe('Date', () => {
   test('should return day of week',() => {
     const date = new Date(1, 1, 2000)
     date.dayOfWeek();
-    expect(date.dayOfWeek()).toEqual("Saturday")
+    expect(date.dayOfWeek()).toEqual(6)
   })
 });

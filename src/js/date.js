@@ -18,23 +18,25 @@ export class Date {
   first2DigsOfYear () {
     this.dateAdjust();
     let yearArr = this.year.toString().split("");
-    let y = parseInt(yearArr[0] + yearArr[1])
-    return y 
+    this.y = parseInt(yearArr[0] + yearArr[1])
+    return this.y
   }
 
   last2DigsOfYear () {
     this.dateAdjust();
     let yearArr = this.year.toString().split("");
-    let Y;
     if (yearArr[3] !== "1" ) {
-      Y = parseInt(yearArr[2] + yearArr[3])
+      this.Y = parseInt(yearArr[2] + yearArr[3]);
     } else {
-      Y = 0
+      this.Y = 0;
     }
-    return Y
+    return this.Y;
   }
 
   dayOfWeek () {
-    
+    this.first2DigsOfYear();
+    this.last2DigsOfYear();
+    this.w = (this.day + Math.round(2.6 * this.month - 0.2) + 5 * (this.Y % 4) + 3 * this.Y + 5 * (this.y % 4)) % 7;
+    return this.w;
   }
 }
