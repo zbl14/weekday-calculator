@@ -15,7 +15,7 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
-      title: ' ',
+      title: 'Day of week',
       template: './src/index.html',
       inject: 'body'
     })
