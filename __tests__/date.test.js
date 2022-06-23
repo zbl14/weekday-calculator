@@ -32,4 +32,10 @@ describe('Date', () => {
     expect(date.month).toEqual(3);
     expect(date.year).toEqual(2000);
   });
+
+  test('should return adjust',() => {
+    const date = new Date(1, 1, 2000)
+    date.first2DigsOfYear();
+    expect(date.year).toEqual(1999)
+  })
 });

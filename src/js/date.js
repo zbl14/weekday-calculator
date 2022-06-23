@@ -14,4 +14,9 @@ export class Date {
       this.year -= 1;
     }
   }
+
+  first2DigsOfYear () {
+    // this.dateAdjust()
+    // this.year = this.year
+  }
 }
