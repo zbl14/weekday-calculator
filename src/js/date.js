@@ -39,7 +39,11 @@ export class Date {
     this.w = (this.day + Math.round(2.6 * this.month - 0.2) + 5 * (this.Y % 4) + 3 * this.Y + 5 * (this.y % 4)) % 7;
     return this.w = this.w === 0 ? "Sunday"
       : this.w === 1 ? "Monday"
+      : this.w === 2 ? "Tuesday"
+      : this.w === 3 ? "Wednesday"
+      : this.w === 4 ? "Thursday"
+      : this.w === 5 ? "Friday"
       : this.w === 6 ? "Saturday"
-      : "Sunday"
+      : "Sunday";
   }
 }

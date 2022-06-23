@@ -51,9 +51,15 @@ describe('Date', () => {
     expect(date.last2DigsOfYear()).toEqual(0)
   })
 
-  test('should return day of week',() => {
+  test('should return Saturday',() => {
     const date = new Date(1, 1, 2000)
     date.dayOfWeek();
     expect(date.dayOfWeek()).toEqual("Saturday")
+  })
+
+  test('should return day of week',() => {
+    const date = new Date(31, 12, 2000)
+    date.dayOfWeek();
+    expect(date.dayOfWeek()).toEqual("Sunday")
   })
 });
