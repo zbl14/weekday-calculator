@@ -12,18 +12,22 @@ export class Date {
     } else if (this.month === 2) {
       this.month = 12;
       this.year -= 1;
+    } else {
+      this.month -= 2
+      this.year = this.year 
     }
+    return this.month, this.year;
   }
 
   first2DigsOfYear () {
-    this.dateAdjust();
+    // this.dateAdjust();
     let yearArr = this.year.toString().split("");
     this.y = parseInt(yearArr[0] + yearArr[1])
     return this.y
   }
 
   last2DigsOfYear () {
-    this.dateAdjust();
+    // this.dateAdjust();
     let yearArr = this.year.toString().split("");
     if (yearArr[3] !== "1" ) {
       this.Y = parseInt(yearArr[2] + yearArr[3]);
@@ -34,16 +38,17 @@ export class Date {
   }
 
   dayOfWeek () {
+    this.dateAdjust();
     this.first2DigsOfYear();
     this.last2DigsOfYear();
-    this.w = (this.day + Math.round(2.6 * this.month - 0.2) + 5 * (this.Y % 4) + 3 * this.Y + 5 * (this.y % 4)) % 7;
+    this.w = ((this.day) % 7 + (Math.trunc(2.6 * this.month - 0.2)) % 7 + (5 * (this.Y % 4)) % 7 + (3 * this.Y) % 7 + (5 * (this.y % 4)) % 7) % 7;
+    console.log(this.w)
     return this.w = this.w === 0 ? "Sunday"
       : this.w === 1 ? "Monday"
       : this.w === 2 ? "Tuesday"
       : this.w === 3 ? "Wednesday"
       : this.w === 4 ? "Thursday"
       : this.w === 5 ? "Friday"
-      : this.w === 6 ? "Saturday"
-      : "Sunday";
+      : "Saturday"
   }
 }

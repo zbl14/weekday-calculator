@@ -29,37 +29,47 @@ describe('Date', () => {
     const date = new Date(1, 3, 2000);
     date.dateAdjust();
     expect(date.day).toEqual(1);
-    expect(date.month).toEqual(3);
+    expect(date.month).toEqual(1);
     expect(date.year).toEqual(2000);
   });
 
   test('should return first 2 digs of adjusted year',() => {
-    const date = new Date(1, 1, 2000)
+    const date = new Date(1, 1, 2000);
+    date.dateAdjust();
     date.first2DigsOfYear();
-    expect(date.first2DigsOfYear()).toEqual(19)
-  })
+    expect(date.first2DigsOfYear()).toEqual(19);
+  });
 
   test('should return last 2 digs of adjusted year',() => {
-    const date = new Date(1, 1, 2000)
+    const date = new Date(1, 1, 2000);
+    date.dateAdjust();
     date.last2DigsOfYear();
-    expect(date.last2DigsOfYear()).toEqual(99)
-  })
+    expect(date.last2DigsOfYear()).toEqual(99);
+  });
 
   test('should return last 2 digs of adjusted year',() => {
-    const date = new Date(1, 1, 2001)
+    const date = new Date(1, 1, 2001);
     date.last2DigsOfYear();
-    expect(date.last2DigsOfYear()).toEqual(0)
-  })
+    expect(date.last2DigsOfYear()).toEqual(0);
+  });
 
   test('should return Saturday',() => {
-    const date = new Date(1, 1, 2000)
-    date.dayOfWeek();
-    expect(date.dayOfWeek()).toEqual("Saturday")
-  })
+    const date = new Date(1, 1, 2000);
+    expect(date.dayOfWeek()).toEqual("Saturday");
+  });
 
   test('should return day of week',() => {
-    const date = new Date(31, 12, 2000)
-    date.dayOfWeek();
-    expect(date.dayOfWeek()).toEqual("Sunday")
-  })
+    const date = new Date(31, 12, 2000);
+    expect(date.dayOfWeek()).toEqual("Sunday");
+  });
+
+  test('should return day of week in the past',() => {
+    const date = new Date(30, 4, 1777);
+    expect(date.dayOfWeek()).toEqual("Wednesday");
+  });
+
+  test('should return day of week in the future',() => {
+    const date = new Date(29, 2, 2024);
+    expect(date.dayOfWeek()).toEqual("Thursday");
+  });
 });
