@@ -8,9 +8,9 @@ $(document).ready(function() {
   $("form#inputtedDate").submit((event) => {
     event.preventDefault();
     const month = parseInt($("#inputtedMonth").val());
-    const day = parseInt($("#inputtedMonth").val());
-    const year = parseInt($("#inputtedMonth").val());
+    const day = parseInt($("#inputtedDay").val());
+    const year = parseInt($("#inputtedYear").val());
     let date = new Date(day, month, year);
-    $("#result").html(date.dayOfWeek());
+    $("#result").html(`${month}-${day}-${year} is ${date.dayOfWeek()}`);
   });
 });
