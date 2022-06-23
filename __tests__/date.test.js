@@ -24,4 +24,12 @@ describe('Date', () => {
     expect(date.month).toEqual(12);
     expect(date.year).toEqual(1999);
   });
+
+  test('should not adjust date if the month is not Jan or Feb',() => {
+    const date = new Date(1, 3, 2000);
+    date.dateAdjust();
+    expect(date.day).toEqual(1);
+    expect(date.month).toEqual(3);
+    expect(date.year).toEqual(2000);
+  });
 });
