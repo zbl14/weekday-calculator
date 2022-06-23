@@ -9,7 +9,7 @@ describe('Date', () => {
     expect(date.year).toEqual(2000);
   });
 
-  test('should adjust date when month is Jan or Feb',() => {
+  test('should adjust date when month is Jan',() => {
     const date = new Date(1, 1, 2000);
     date.dateAdjust();
     expect(date.day).toEqual(1);
@@ -17,4 +17,11 @@ describe('Date', () => {
     expect(date.year).toEqual(1999);
   });
 
+  test('should adjust date when month is Feb',() => {
+    const date = new Date(1, 2, 2000);
+    date.dateAdjust();
+    expect(date.day).toEqual(1);
+    expect(date.month).toEqual(12);
+    expect(date.year).toEqual(1999);
+  });
 });
