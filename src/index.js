@@ -5,6 +5,5 @@ import './css/styles.css';
 import $ from 'jquery';
 
 $(document).ready(function() {
-let date = new Date()
-
+  let date = new Date();
 });
