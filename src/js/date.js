@@ -18,7 +18,7 @@ export class Date {
   first2DigsOfYear () {
     this.dateAdjust();
     let yearArr = this.year.toString().split("");
-    // let y = parseInt(yearArry[0] + yearArry[1])
-    return yearArr 
+    let y = parseInt(yearArr[0] + yearArr[1])
+    return y 
   }
 }
