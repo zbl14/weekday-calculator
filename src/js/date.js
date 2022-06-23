@@ -25,7 +25,12 @@ export class Date {
   last2DigsOfYear () {
     this.dateAdjust();
     let yearArr = this.year.toString().split("");
-    let Y = parseInt(yearArr[2] + yearArr[3])
-    return Y 
+    let Y;
+    if (yearArr[3] !== "1" ) {
+      Y = parseInt(yearArr[2] + yearArr[3])
+    } else {
+      Y = 0
+    }
+    return Y
   }
 }
