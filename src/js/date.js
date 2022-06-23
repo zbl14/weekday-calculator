@@ -16,7 +16,7 @@ export class Date {
   }
 
   first2DigsOfYear () {
-    // this.dateAdjust()
-    // this.year = this.year
+    this.dateAdjust()
+    this.year = this.year
   }
 }
