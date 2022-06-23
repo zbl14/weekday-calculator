@@ -5,5 +5,12 @@ import './css/styles.css';
 import $ from 'jquery';
 
 $(document).ready(function() {
-  let date = new Date();
+  $("form#inputtedDate").submit((event) => {
+    event.preventDefault();
+    const month = parseInt($("#inputtedMonth").val());
+    const day = parseInt($("#inputtedMonth").val());
+    const year = parseInt($("#inputtedMonth").val());
+    let date = new Date(day, month, year);
+    $("#result").html(date.dayOfWeek());
+  });
 });
