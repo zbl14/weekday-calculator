@@ -33,4 +33,8 @@ export class Date {
     }
     return Y
   }
+
+  dayOfWeek () {
+    
+  }
 }
