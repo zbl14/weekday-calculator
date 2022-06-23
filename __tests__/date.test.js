@@ -38,4 +38,10 @@ describe('Date', () => {
     date.first2DigsOfYear();
     expect(date.first2DigsOfYear()).toEqual(19)
   })
+
+  test('should return last 2 digs of adjusted year',() => {
+    const date = new Date(1, 1, 2000)
+    date.last2DigsOfYear();
+    expect(date.last2DigsOfYear()).toEqual(99)
+  })
 });
