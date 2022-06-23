@@ -11,6 +11,7 @@ describe('Date', () => {
 
   test('should adjust date when month is Jan or Feb',() => {
     const date = new Date(1, 1, 2000);
+    date.dateAdjust();
     expect(date.day).toEqual(1);
     expect(date.month).toEqual(11);
     expect(date.year).toEqual(1999);
