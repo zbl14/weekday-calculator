@@ -15,7 +15,7 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
-      title: 'Day of week',
+      title: 'Weekday calculator',
       template: './src/index.html',
       inject: 'body'
     })
